@@ -1,15 +1,14 @@
-import "reflect-metadata";
+import "express-async-errors";
 import express, { NextFunction, Response, Request } from "express";
 
-import { AppError } from "../../error/AppError";
-import { router } from "./routes";
-import "../../container";
+import { AppError } from "./error/AppError";
+import { routes } from "./routes";
 
 const app = express();
 
 app.use(express.json());
 
-app.use(router);
+app.use(routes);
 
 app.use(
   (err: Error, request: Request, response: Response, next: NextFunction) => {
@@ -26,4 +25,4 @@ app.use(
   }
 );
 
-export { app };
+app.listen(3333, () => console.log("Server is running"));

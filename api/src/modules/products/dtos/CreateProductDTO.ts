@@ -1,4 +1,4 @@
-export interface IProductDTO {
+export interface CreateProductDTO {
   name: string;
   category: string;
   price: number;
