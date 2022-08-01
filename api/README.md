@@ -6,7 +6,7 @@ API do Desafio da DomPixel.
 
 - [x] Criar arquitetura da API (modules e shared);
 - [x] Criar entidade "products" e seu repositório;
-- [ ] Implementar a injeção de dependencias;
+- [x] Implementar a injeção de dependencias;
 - [ ] Criar e configurar a base de dados;
 - [ ] Criar casos de uso da entidade "products";
 - [ ] Criar as rotas com seus endpoints;
