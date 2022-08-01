@@ -12,7 +12,7 @@ export class CreateProductUseCase {
     });
 
     if (nameAlreadyExists) {
-      throw new AppError("Product name already exists");
+      throw new AppError("Product name already exists!");
     }
 
     const product = await prisma.product.create({

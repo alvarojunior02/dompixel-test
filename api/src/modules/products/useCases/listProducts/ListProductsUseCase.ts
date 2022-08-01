@@ -4,7 +4,11 @@ import { prisma } from "../../../../prisma/client";
 
 export class ListProductsUseCase {
   async execute(): Promise<Product[]> {
-    const products = await prisma.product.findMany();
+    const products = await prisma.product.findMany({
+      orderBy: {
+        id: "asc",
+      },
+    });
 
     if (products.length === 0) {
       throw new AppError("None exist any Product!");

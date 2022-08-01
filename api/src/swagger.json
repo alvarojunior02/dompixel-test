@@ -1,0 +1,217 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "API do Desafio da DomPixel",
+    "description": "Essa API é responsável por criar as rotas de manipuação de cadastros de produtos.",
+    "contact": {
+      "email": "alvarojunior02@gmail.com"
+    },
+    "version": "1.0.0"
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3333/"
+    }
+  ],
+  "paths": {
+    "/products": {
+      "post": {
+        "summary": "Cadastro de Produto",
+        "description": "Essa rota é responsável por cadastrar um produto.",
+        "tags": ["Product"],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              },
+              "examples": {
+                "Product": {
+                  "value": {
+                    "name": "Banana",
+                    "category": "Fruta",
+                    "price": 5.50
+                  }
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "400": {
+            "description": "Product name already exists!"
+          },
+          "201": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Product"
+                },
+                "examples": {
+                  "Product": {
+                    "value": {
+                      "id": 1,
+                      "name": "Banana",
+                      "category": "Fruta",
+                      "price": 5.50,
+                      "created_at": "2022-08-01...."
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "get": {
+        "summary": "Listagem de Produtos",
+        "description": "Essa rota é responsável por listar todos os produtos",
+        "tags": ["Product"],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "items": [
+                    {
+                      "$ref": "#/components/schemas/Product"
+                    }
+                  ]
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "None exist any Product!"
+          }
+        }
+      }
+    },
+    "/products/{id}": {
+      "get": {
+        "summary": "Buscar Produto pelo id",
+        "description": "Essa rota é responsável por buscar um produto específico, com o id fornecido",
+        "tags": ["Product"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do produto",
+            "required": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Product"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Product not found!"
+          }
+        }
+      },
+      "put": {
+        "summary": "Alterar Produto",
+        "description": "Essa rota é responsável por alterar um Produto, de acordo com o id e body fornecidos",
+        "tags": ["Product"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do Produto",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "$ref": "#/components/schemas/Product"
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "Product not found!"
+          },
+          "400": {
+            "description": "Product name already exists!"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Deletar Produto",
+        "description": "Essa rota é responsável por deletar um Produto, de acordo com o id fornecido",
+        "tags": ["Product"],
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "Id do Produto",
+            "required": true
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "$ref": "#/components/schemas/Product"
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "Product successfull deleted!"
+          },
+          "404": {
+            "description": "Product not found!"
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Product": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "number"
+          },
+          "name": {
+            "type": "string"
+          },
+          "category": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "created_at": {
+            "type": "date-time"
+          }
+        }
+      }
+    }
+  }
+}
