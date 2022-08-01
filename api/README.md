@@ -5,7 +5,7 @@ API do Desafio da DomPixel.
 ## To-Do
 
 - [x] Criar arquitetura da API (modules e shared);
-- [ ] Criar entidade "products" e seu repositório;
+- [x] Criar entidade "products" e seu repositório;
 - [ ] Implementar a injeção de dependencias;
 - [ ] Criar e configurar a base de dados;
 - [ ] Criar casos de uso da entidade "products";
