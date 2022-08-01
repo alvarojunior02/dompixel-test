@@ -1,10 +1,9 @@
 const theme = {
   colors: {
-    background: "#FFFADE no-repeat padding-box",
-    text: "#DCDCDC",
-    backgroundPages: "#FFFADE",
-    textTitle: "#707070",
-    yellowLight: "#F1E9B9",
+    background: "#FFFFFF",
+    backgroundHeaderList: "#F7F7FA",
+    text: "#232326",
+    textTitle: "#212121",
   },
 };
 

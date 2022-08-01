@@ -7,9 +7,13 @@ import swaggerDocs from "./swagger.json";
 import { AppError } from "./error/AppError";
 import { routes } from "./routes";
 
+import cors from "cors";
+
 const app = express();
 
 app.use(express.json());
+
+app.use(cors());
 
 app.use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocs));
 
