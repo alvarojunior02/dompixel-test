@@ -15,6 +15,6 @@ API do Desafio da DomPixel.
 
 - [x] Utilizar typescript caso utilize Node;
 - [ ] Escrever Unit Test para o endpoint "POST /products";
-- [x] Executar o projeto usando Docker;
+- [ ] Executar o projeto usando Docker;
 - [ ] Escrever o esquema de segurança aplicado nos endpoints;
 - [x] Escrever uma documentação para a API;
