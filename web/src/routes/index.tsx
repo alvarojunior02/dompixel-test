@@ -10,7 +10,7 @@ const RoutesHub: React.FC = () => {
     <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/createProduct" element={<CreateProduct />} />
-        <Route path="/updateProduct" element={<UpdateProduct />} />
+        <Route path="/updateProduct/:id" element={<UpdateProduct />} />
     </Routes>
   );
 };
