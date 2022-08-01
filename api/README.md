@@ -14,7 +14,4 @@ API do Desafio da DomPixel.
 ## Diferenciais
 
 - [x] Utilizar typescript caso utilize Node;
-- [ ] Escrever Unit Test para o endpoint "POST /products";
-- [ ] Executar o projeto usando Docker;
-- [ ] Escrever o esquema de segurança aplicado nos endpoints;
 - [x] Escrever uma documentação para a API;
