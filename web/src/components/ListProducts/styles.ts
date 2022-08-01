@@ -95,7 +95,7 @@ export const ItemPriceContainer = styled.div`
 `;
 
 export const ItemCreatedAtContainer = styled.div`
-  width: 15%;
+  width: 20%;
   height: 100%;
   text-align: center;
 
@@ -107,7 +107,7 @@ export const ItemCreatedAtContainer = styled.div`
 `;
 
 export const ItemActions = styled.div`
-  width: 20%;
+  width: 15%;
   height: 100%;
   text-align: center;
 
@@ -123,4 +123,34 @@ export const Text = styled.p`
   font-style: normal;
   font-weight: 400;
   font-size: 16px;
+`;
+
+export const ButtonsContainer = styled.div`
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+export const Button = styled.button`
+  width: 40px;
+  height: 40px;
+
+  border: none;
+
+  background-color: ${({ theme }) => theme.colors.background};
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+export const ButtonImage = styled.img`
+  width: 80%;
+  height: 80%;
+
+  cursor: pointer;
 `;

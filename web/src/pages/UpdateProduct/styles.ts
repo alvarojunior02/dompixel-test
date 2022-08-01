@@ -12,18 +12,6 @@ export const Container = styled.div`
   background-color: ${({ theme }) => theme.colors.background};
 `;
 
-export const Header = styled.div`
-  width: 90%;
-  height: 10vh;
-
-  padding: 5px;
-
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  align-items: center;
-`;
-
 export const Title = styled.h1`
   font-family: "Montserrat";
   font-style: normal;
@@ -34,8 +22,27 @@ export const Title = styled.h1`
   color: ${({ theme }) => theme.colors.textTitle};
 `;
 
-export const ButtonCreateProduct = styled.button`
-  width: 20%;
+export const Label = styled.p`
+  font-family: "Montserrat";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+`;
+
+export const Input = styled.input`
+  width: 240px;
+  height: 40px;
+
+  border: 2px solid #000000;
+
+  text-align: center;
+
+  margin: 10px;
+  padding: 5px;
+`;
+
+export const ButtonUpdateProduct = styled.button`
+  width: 250px;
   height: 50px;
 
   cursor: pointer;
@@ -46,6 +53,27 @@ export const ButtonCreateProduct = styled.button`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  margin: 5px;
+  padding: 5px;
+`;
+
+export const BackButton = styled.button`
+  width: 250px;
+  height: 50px;
+
+  cursor: pointer;
+
+  background-color: #ffffff;
+  color: #000000;
+  border: 2px solid #000000;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  margin: 5px;
+  padding: 5px;
 `;
 
 export const ButtonText = styled.p`
