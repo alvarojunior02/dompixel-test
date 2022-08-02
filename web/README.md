@@ -7,5 +7,5 @@ Telas para cadastro, edição, exclusão e listagem de produtos.
 - [x] Criar estrutura de pastas do projeto;
 - [x] Implementar a listagem;
 - [x] Implementar o cadastro;
-- [ ] Implementar a edição;
-- [ ] Implementar a exclusão;
+- [x] Implementar a edição;
+- [x] Implementar a exclusão;
